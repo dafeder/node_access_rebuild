@@ -16,11 +16,7 @@ function node_access_rebuild_drush_command() {
   $items['node-access-rebuild'] = array(
     'description' => 'Rebuild the node access table',
     'callback' => 'drush_node_access_rebuild',
-    'bootstrap' => DRUSH_BOOTSTRAP_DRUSH, // No bootstrap.
-    'options' => array(
-    //  'no-cache-clear' => 'Rebuild the registry only, do not clear caches, unless --fire-bazooka is also used.',
-    //  'fire-bazooka' => 'Truncate registry and registry_file tables and build them from scratch. Forces all caches clear.',
-    ),
+    'options' => array(),
     'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
     'aliases' => array('nar'),
   );
